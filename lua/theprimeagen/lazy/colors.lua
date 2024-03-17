@@ -1,10 +1,10 @@
 return {
-    "navarasu/onedark.nvim",
+    'navarasu/onedark.nvim',
     config = function()
         -- Lua
-        require("onedark").setup {
+        require('onedark').setup {
             -- Main options --
-            style = "deep",               -- Default theme style. Choose between "dark", "darker", "cool", "deep", "warm", "warmer" and "light"
+            style = 'deep',               -- Default theme style. Choose between 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer' and 'light'
             transparent = false,          -- Show/hide background
             term_colors = true,           -- Change terminal color as per the selected theme style
             ending_tildes = false,        -- Show the end-of-buffer tildes. By default they are hidden
@@ -12,13 +12,13 @@ return {
 
             -- Change code style ---
             -- Options are italic, bold, underline, none
-            -- You can configure multiple style with comma separated, For e.g., keywords = "italic,bold"
+            -- You can configure multiple style with comma separated, For e.g., keywords = 'italic,bold'
             code_style = {
-                comments = "none",
-                keywords = "none",
-                functions = "none",
-                strings = "none",
-                variables = "none"
+                comments = 'none',
+                keywords = 'none',
+                functions = 'none',
+                strings = 'none',
+                variables = 'none'
             },
 
             -- Lualine options --
@@ -27,9 +27,9 @@ return {
             },
 
             -- Custom Highlights --
-            colors = {}, -- Override default colors
+            colors = { deepred = "#f65866" },
             highlights = {
-                ["@variable.member"] = { fg = "$red" }
+                ["@variable.member"] = { fg = "$deepred", sp = "$deepred" }
             }, -- Override highlight groups
 
             -- Plugins Config --
@@ -39,6 +39,7 @@ return {
                 background = true, -- use background color for virtual text
             },
         }
+        require("onedark").load()
     end
 
 }
