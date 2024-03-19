@@ -29,7 +29,6 @@ return {
             ensure_installed = {
                 "jsonls",
                 "lua_ls",
-                "java_language_server",
                 "rust_analyzer",
                 "tsserver",
             },
