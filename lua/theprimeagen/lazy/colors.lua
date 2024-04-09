@@ -47,7 +47,6 @@
 --}
 return {
     'navarasu/onedark.nvim',
-    priority = 1000,
     config = function()
         -- Lua
         require('onedark').setup {
@@ -70,8 +69,12 @@ return {
             },
 
             -- Custom Highlights --
-            colors = {},                                             -- Override default colors
-            highlights = { ["@variable.member"] = { fg = "$red" } }, -- Override highlight groups
+            colors = {}, -- Override default colors
+            highlights = {
+                ["@variable.member"] = { fg = "#f65866" },
+                ["@variable"] = { fg = "#f65866" },
+                ["@lsp.type.variable"] = { fg = "#f65866" }
+            }, -- Override highlight groups
 
             -- Plugins Config --
             diagnostics = {
