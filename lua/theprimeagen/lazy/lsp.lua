@@ -27,10 +27,6 @@ return {
         require("mason-lspconfig").setup({
             automatic_installation = true,
             ensure_installed = {
-                "jsonls",
-                "lua_ls",
-                "rust_analyzer",
-                "tsserver",
             },
             handlers = {
                 function(server_name) -- default handler (optional)
