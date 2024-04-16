@@ -1,6 +1,6 @@
 vim.opt.guicursor = ""
 vim.opt.mouse = ""
-vim.opt.colorcolumn="0"
+vim.opt.colorcolumn = "0"
 vim.g.netrw_bufsettings = 'noma nomod nu rnu nobl nowrap ro'
 
 vim.opt.nu = true
@@ -30,4 +30,3 @@ vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50
-
