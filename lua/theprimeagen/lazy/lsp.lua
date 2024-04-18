@@ -27,6 +27,7 @@ return {
         require("mason-lspconfig").setup({
             automatic_installation = true,
             ensure_installed = {
+                "clangd",
             },
             handlers = {
                 function(server_name) -- default handler (optional)
