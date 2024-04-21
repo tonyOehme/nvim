@@ -25,7 +25,7 @@ return {
             colors = {}, -- Override default colors
             highlights = {
                 ["@lsp.type.variable"] = { fg = "$red" },
-                ["@lsp.type.property"] = { fg = "$red" }
+                ["@property"] = { fg = "$red" },
             }, -- Override highlight groups
 
             -- Plugins Config --
