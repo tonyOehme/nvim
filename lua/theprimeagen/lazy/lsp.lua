@@ -28,6 +28,9 @@ return {
             automatic_installation = true,
             ensure_installed = {
                 "clangd",
+                "tsserver",
+                "dockerls",
+                "java_language_server",
             },
             handlers = {
                 function(server_name) -- default handler (optional)
