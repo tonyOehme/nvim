@@ -11,7 +11,6 @@ return {
         require('telescope').setup({
             pickers = {
                 find_files = {
-                    -- `hidden = true` will still show the inside of `.git/` as it's not `.gitignore`d.
                     find_command = { "rg", "--files", "--hidden", "--glob", "!**/.git/*" },
                 },
             },
@@ -28,9 +27,7 @@ return {
             local word = vim.fn.expand("<cWORD>")
             builtin.grep_string({ search = word })
         end)
-        vim.keymap.set('n', '<leader>ps', function()
-            builtin.grep_string({ search = vim.fn.input("Grep > ") })
-        end)
+        vim.keymap.set('n', '<leader>ps', builtin.live_grep, {})
         vim.keymap.set('n', '<leader>vh', builtin.help_tags, {})
     end
 }
