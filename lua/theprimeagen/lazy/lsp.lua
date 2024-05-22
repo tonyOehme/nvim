@@ -49,6 +49,14 @@ return {
                         }
                     }
                 end,
+                ["clangd"] = function()
+                    local nvim_lsp = require("lspconfig")
+
+    nvim_lsp.clangd.setup {
+        cmd = { "/opt/homebrew/opt/llvm/bin/clangd", "--background-index" },
+        root_dir = nvim_lsp.util.root_pattern("compile_commands.json", ".clangd"),
+    }
+                end,
             }
         })
 
