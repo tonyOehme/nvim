@@ -28,6 +28,7 @@ return {
             automatic_installation = true,
             ensure_installed = {
                 "clangd",
+                "ocamllsp",
             },
             handlers = {
                 function(server_name) -- default handler (optional)
