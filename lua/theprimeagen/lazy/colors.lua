@@ -36,6 +36,7 @@ return {
             },
         }
         require('onedark').load()
+        vim.api.nvim_set_hl(0, 'CursorLineNr', { fg = 'orange', bold = true })
     end
 
 }

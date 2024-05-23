@@ -3,12 +3,14 @@ vim.opt.cursorline = true
 vim.opt.colorcolumn = "0"
 vim.g.netrw_bufsettings = 'noma nomod nu rnu nobl nowrap ro'
 
-vim.opt.nu = true
 vim.opt.relativenumber = true
+vim.opt.number = true
+vim.opt.laststatus = 3
 
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
+vim.g.autoformat = true
 vim.opt.expandtab = true
 
 vim.opt.smartindent = true
