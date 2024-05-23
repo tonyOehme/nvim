@@ -28,7 +28,6 @@ return {
             automatic_installation = true,
             ensure_installed = {
                 "clangd",
-                "ocamllsp",
             },
             handlers = {
                 function(server_name) -- default handler (optional)
@@ -50,14 +49,6 @@ return {
                         }
                     }
                 end,
-                ["clangd"] = function()
-                    local lspconfig = require("lspconfig")
-
-                    lspconfig.clangd.setup {
-                        cmd = { "/opt/homebrew/opt/llvm/bin/clangd", "--background-index" },
-                        root_dir = lspconfig.util.root_pattern("compile_commands.json", ".clangd"),
-                    }
-                end
             }
         })
 
