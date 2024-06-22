@@ -21,10 +21,13 @@ vim.opt.smartcase = true
 vim.opt.ignorecase = true
 vim.opt.mouse = ""
 vim.opt.termguicolors = true
+vim.opt.lazyredraw = true
 vim.opt.scrolloff = 8
+vim.opt.sidescrolloff = 8
 vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
 vim.opt.updatetime = 50
 vim.opt.autoread = true
 vim.opt.wrap = false
 vim.opt.wildmode = "longest,list"
+vim.opt.swapfile = false
