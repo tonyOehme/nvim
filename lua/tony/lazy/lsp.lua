@@ -28,6 +28,9 @@ return {
             automatic_installation = true,
             ensure_installed = {
                 "clangd",
+                "pyright",
+                "lua_ls",
+                "bashls",
             },
             handlers = {
                 function(server_name) -- default handler (optional)
